@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 import Header from "@/components/Header";
 import "./globals.css";
 
@@ -22,7 +23,7 @@ export default function RootLayout({
     <html lang='en' className='dark'>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ClerkProvider>
+        <ClerkProvider appearance={{ baseTheme: dark }}>
           <Header />
           {children}
         </ClerkProvider>

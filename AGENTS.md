@@ -416,7 +416,9 @@ export default async function Dashboard() {
 
 ### Protecting Routes
 
-1. Use Clerk middleware in `middleware.ts`
+⚠️ **IMPORTANT**: `middleware.ts` is **DEPRECATED** in this project's version of Next.js. **NEVER use `middleware.ts`**. Use `proxy.ts` instead for authentication middleware and route protection.
+
+1. Use Clerk middleware in `proxy.ts` (not middleware.ts)
 2. Check authentication in server components
 3. Use `<SignedIn>` / `<SignedOut>` components in client components
 
